@@ -1,3 +1,4 @@
+<!-- Link: https://meowbiscuit.github.io/Prompt_Generator/main.html -->
 <script type="text/javascript">
 
     var promptsFluff = ["<strong>{A}</strong> and <strong>{B}</strong> playing Mario Kart. It gets pretty competitive. Suddenly <strong>{A}</strong> reaches over to distract <strong>{B}</strong>. A tickle fight follows.", "<strong>{B}</strong> gives <strong>{A}</strong> a gift, bought or handmade.", "<strong>{B}</strong> and <strong>{A}</strong> swap bodies for a day.", "<strong>{B}</strong> and <strong>{A}</strong> exploring each others' bodies, but not in a sexual way. Finding their different birthmarks, looking over each others' scars and sharing the stories behind them, running their hands over one another and just appreciating the feeling of the other person next to them.", 
@@ -10,7 +11,7 @@
     "<strong>{A}</strong> notices <strong>{B}</strong> has hurt themself.", "<strong>{A}</strong> is forced to watch <strong>{B}</strong> die.", "<strong>{A}</strong>: “It’s all my fault.”", "<strong>{B}</strong>: “It’s all my fault.”", "<strong>{B}</strong>: “Please talk to me.”", "<strong>{A}</strong>: “Please talk to me.”", "<strong>{A}</strong>: “Another nightmare?”", "<strong>{B}</strong>: “Another nightmare?”"]
     // var promptsHorror = ["<strong>{A}</strong> and <strong>{B}</strong> having a picnic in the park.", "Test Horror", "Test Horror2"]
     // var promptsNsfw = ["<strong>{A}</strong> gets jealous over <strong>{B}</strong> being flirted to by someone else. That night, they make sure to remind <strong>{B}</strong> of who they belong to.", "<strong>{B}</strong> is a sleeptalker, and <strong>{A}</strong> overhears <strong>{B}</strong> having a wet dream about them.", "<strong>{A}</strong> is touch-starved, and <strong>{B}</strong> finds more and more reasons to touch <strong>{A}</strong>.", "<strong>{B}</strong> loves to worship <strong>{A}</strong>'s body, sometimes for hours, stripping <strong>{A}</strong> slowly, kissing and licking and showering <strong>{A}</strong> with praise and adoration.", "There's a heatwave, and <strong>{B}</strong> is sweating through their summer clothes, skin glistening with perspiration and clothes clinging uncomfortably to them. <strong>{A}</strong> suggests <strong>{B}</strong> remove some clothes. Maybe all their clothes...", ]
-    var promptsOther = ["Highschool/College AU.", "Western AU", "Immortal AU", "Corporate AU", "Ghost hunting AU", "Soulmate AU", "Band AU", "Tattoo/Flower shop AU", "Time Travel AU", "Isekai AU", "Heroes AU", "Zombie Apocalypse AU", "Heist AU", "Murder Mystery AU"]
+    var promptsAUs = ["Highschool/College AU.", "Western AU", "Immortal AU", "Corporate AU", "Ghost hunting AU", "Soulmate AU", "Band AU", "Tattoo/Flower shop AU", "Time Travel AU", "Isekai AU", "Heroes AU", "Zombie Apocalypse AU", "Heist AU", "Murder Mystery AU"]
     var promptsFiveThings = ["Five times <strong>{A}</strong> had blood on their hands, and one time it was theirs.","Five times <strong>{B}</strong> had blood on their hands, and one time it was theirs.", "Five times <strong>{A}</strong> sacrificed their own happiness for others, and one time they finally put themselves first.", "Five times <strong>{B}</strong> felt safe with <strong>{A}</strong>, and one time they were afraid of them.", "Five times <strong>{B}</strong> and <strong>{A}</strong> made promises, and one time they broke them all.", "Five times <strong>{B}</strong> called <strong>{A}</strong> by a pet name, and one time <strong>{A}</strong> found one for them.", "Five times people thought <strong>{B}</strong> and <strong>{A}</strong> were a couple, and one time it was true.", "Five times <strong>{A}</strong> showed affection through the five love languages, and one time <strong>{B}</strong> returned the gesture.", "Five times <strong>{A}</strong> was late, and one time they were early."]
 
     function clear1() {
@@ -76,12 +77,12 @@
     //     document.getElementById("premise").innerHTML = result;
     // }
 
-    function other() {
+    function altUn() {
         A = document.getElementById("person1").value;
         B = document.getElementById("person2").value;
 
-        var R1 = Math.floor(Math.random() * promptsOther.length);
-        str = promptsOther[R1]
+        var R1 = Math.floor(Math.random() * promptsAUs.length);
+        str = promptsAUs[R1]
 
         var result = str.replace(/{A}/g, A).replace(/{B}/g, B);
         document.getElementById("premise").innerHTML = result;
@@ -264,7 +265,7 @@
         border-color: rgb(146, 146, 146);
     } */
 
-    #otherBtn {
+    #altUnBtn {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
         border-radius: 25px;
@@ -281,7 +282,7 @@
         user-select: none;
     }
 
-    #otherBtn:hover {
+    #altUnBtn:hover {
         margin: 75px 0px 0px 250px;
         color: #ffe100;
         background: #16191E;
@@ -388,7 +389,7 @@
             <div id="angstBtn" onclick="angst()">Angst</div>
             <!-- <div id="horrorBtn" onclick="horror()">Horror</div> -->
             <!-- <div id="nsfwBtn" onclick="nsfw()">Nsfw</div> -->
-            <div id="otherBtn" onclick="other()">Other</div>
+            <div id="altUnBtn" onclick="altUn()">AUs</div>
             <div id="fiveBtn" onclick="five()">5 Things</div>
             <br <div>
 
