@@ -10,7 +10,7 @@
     "<strong>{B}</strong>: “Run! Don’t worry about me.” <br> <strong>{A}</strong>: “But-” <br> <strong>{B}</strong>: “Just run!”", "<strong>{A}</strong> comes back bleeding heavily, and as <strong>{B}</strong> starts to mend them up, they can’t help but worry about how much <strong>{A}</strong>, the ever stoic badass, is sobbing and shaking at the sight of the blood.", "<strong>{A}</strong> and <strong>{B}</strong> are about to get married, but the day before their wedding, <strong>{B}</strong> mysteriously disappears. On their bed lays a note: “If you want them back, cancel the marriage. You have 3 days. If you don’t call it off, they will die.”", "<strong>{A}</strong> crying because they can't keep anything down. Not even water.", "<strong>{A}</strong>: “I thought you cared.. Guess I was wrong.”", "<strong>{B}</strong>: “I thought you cared.. Guess I was wrong.”", "<strong>{B}</strong>: “I'm starting to think you want to get yourself killed.”", "<strong>{A}</strong>: “I'm starting to think you want to get yourself killed.”", "<strong>{A}</strong> being given their favorite food/drink, but not knowing it's poisoned.", "<strong>{B}</strong> being given their favorite food/drink, but not knowing it's poisoned.",
     "<strong>{A}</strong> notices <strong>{B}</strong> has hurt themself.", "<strong>{A}</strong> is forced to watch <strong>{B}</strong> die.", "<strong>{A}</strong>: “It’s all my fault.”", "<strong>{B}</strong>: “It’s all my fault.”", "<strong>{B}</strong>: “Please talk to me.”", "<strong>{A}</strong>: “Please talk to me.”", "<strong>{A}</strong>: “Another nightmare?”", "<strong>{B}</strong>: “Another nightmare?”"]
     // var promptsHorror = ["<strong>{A}</strong> and <strong>{B}</strong> having a picnic in the park.", "Test Horror", "Test Horror2"]
-    // var promptsNsfw = ["<strong>{A}</strong> gets jealous over <strong>{B}</strong> being flirted to by someone else. That night, they make sure to remind <strong>{B}</strong> of who they belong to.", "<strong>{B}</strong> is a sleeptalker, and <strong>{A}</strong> overhears <strong>{B}</strong> having a wet dream about them.", "<strong>{A}</strong> is touch-starved, and <strong>{B}</strong> finds more and more reasons to touch <strong>{A}</strong>.", "<strong>{B}</strong> loves to worship <strong>{A}</strong>'s body, sometimes for hours, stripping <strong>{A}</strong> slowly, kissing and licking and showering <strong>{A}</strong> with praise and adoration.", "There's a heatwave, and <strong>{B}</strong> is sweating through their summer clothes, skin glistening with perspiration and clothes clinging uncomfortably to them. <strong>{A}</strong> suggests <strong>{B}</strong> remove some clothes. Maybe all their clothes...", ]
+    var promptsNsfw = ["<strong>{A}</strong> gets jealous over <strong>{B}</strong> being flirted to by someone else. That night, they make sure to remind <strong>{B}</strong> of who they belong to.", "<strong>{B}</strong> is a sleeptalker, and <strong>{A}</strong> overhears <strong>{B}</strong> having a wet dream about them.", "<strong>{A}</strong> is touch-starved, and <strong>{B}</strong> finds more and more reasons to touch <strong>{A}</strong>.", "<strong>{B}</strong> loves to worship <strong>{A}</strong>'s body, sometimes for hours, stripping <strong>{A}</strong> slowly, kissing and licking and showering <strong>{A}</strong> with praise and adoration.", "There's a heatwave, and <strong>{B}</strong> is sweating through their summer clothes, skin glistening with perspiration and clothes clinging uncomfortably to them. <strong>{A}</strong> suggests <strong>{B}</strong> remove some clothes. Maybe all their clothes...", ]
     var promptsAUs = ["Highschool/College AU.", "Western AU", "Immortal AU", "Corporate AU", "Ghost hunting AU", "Soulmate AU", "Band AU", "Tattoo/Flower shop AU", "Time Travel AU", "Isekai AU", "Superheroes/Superpowers AU", "Zombie Apocalypse AU", "Heist AU", "Murder Mystery AU", "Past Lives AU", "Guardian Angels AU", "Reincarnation AU", "Retail AU", "Bodyguard AU", "Role Reversal AU", "Coffee Shops & Cafés AU", "Arranged Marriage AU", "Different Powers AU"]
     var promptsFiveThings = ["Five times <strong>{A}</strong> had blood on their hands, and one time it was theirs.","Five times <strong>{B}</strong> had blood on their hands, and one time it was theirs.", "Five times <strong>{A}</strong> sacrificed their own happiness for others, and one time they finally put themselves first.", "Five times <strong>{B}</strong> felt safe with <strong>{A}</strong>, and one time they were afraid of them.", "Five times <strong>{B}</strong> and <strong>{A}</strong> made promises, and one time they broke them all.", "Five times <strong>{B}</strong> called <strong>{A}</strong> by a pet name, and one time <strong>{A}</strong> found one for them.", "Five times people thought <strong>{B}</strong> and <strong>{A}</strong> were a couple, and one time it was true.", "Five times <strong>{A}</strong> showed affection through the five love languages, and one time <strong>{B}</strong> returned the gesture.", "Five times <strong>{A}</strong> was late, and one time they were early."]
 
@@ -66,16 +66,16 @@
     //     document.getElementById("premise").innerHTML = result;
     // }
 
-    // function nsfw() {
-    //     A = document.getElementById("person1").value;
-    //     B = document.getElementById("person2").value;
+    function nsfw() {
+        A = document.getElementById("person1").value;
+        B = document.getElementById("person2").value;
 
-    //     var R1 = Math.floor(Math.random() * promptsNsfw.length);
-    //     str = promptsNsfw[R1]
+        var R1 = Math.floor(Math.random() * promptsNsfw.length);
+        str = promptsNsfw[R1]
 
-    //     var result = str.replace(/{A}/g, A).replace(/{B}/g, B);
-    //     document.getElementById("premise").innerHTML = result;
-    // }
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B);
+        document.getElementById("premise").innerHTML = result;
+    }
 
     function altUn() {
         A = document.getElementById("person1").value;
@@ -241,7 +241,7 @@
         border-color: rgb(146, 146, 146);
     } */
 
-    /* #nsfwBtn {
+    #nsfwBtn {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
         border-radius: 25px;
@@ -263,7 +263,7 @@
         color: #ffe100;
         background: #16191E;
         border-color: rgb(146, 146, 146);
-    } */
+    }
 
     #altUnBtn {
         font-family: Arial, Helvetica, sans-serif;
@@ -388,7 +388,7 @@
             <div id="fluffBtn" onclick="fluff()">Fluff</div>
             <div id="angstBtn" onclick="angst()">Angst</div>
             <!-- <div id="horrorBtn" onclick="horror()">Horror</div> -->
-            <!-- <div id="nsfwBtn" onclick="nsfw()">Nsfw</div> -->
+            <div id="nsfwBtn" onclick="nsfw()">Nsfw</div>
             <div id="altUnBtn" onclick="altUn()">AUs</div>
             <div id="fiveBtn" onclick="five()">5 Things</div>
             <br <div>
