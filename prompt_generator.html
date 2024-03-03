@@ -28,6 +28,7 @@
     "<strong>{B}</strong> tending to the hickeys and bites he gave <strong>{A}</strong>.", "<strong>{B}</strong> has fallen asleep on top of <strong>{A}</strong> with his head resting on his chest. When <strong>{B}</strong> wakes up in the morning, he realizes that <strong>{A}</strong> is hard.", "<strong>{A}</strong> and <strong>{B}</strong> are innocently cuddling when <strong>{B}</strong> feels <strong>{A}</strong>'s erection poking him.", "<strong>{A}</strong> and <strong>{B}</strong> fucking in public and having to keep their voices down to avoid getting caught. Bonus: <strong>{A}</strong> has to cover <strong>{B}</strong>'s mouth with his hand. Or his lips.", "<strong>{A}</strong> and <strong>{B}</strong> disheveled and blissed out after a lovemaking session together.", "Highschool/College AU.", "Western AU", "Immortal AU", "Corporate AU", "Ghost hunting AU", "Soulmate AU", "Band AU", "Tattoo/Flower shop AU", "Time Travel AU", "Isekai AU", "Superheroes/Superpowers AU", "Zombie Apocalypse AU", "Heist AU", "Murder Mystery AU", "Past Lives AU", "Guardian Angels AU", "Reincarnation AU", "Retail AU", "Bodyguard AU", "Role Reversal AU", "Coffee Shops & Cafés AU", "Arranged Marriage AU", "Different Powers AU", 
     "Five times <strong>{A}</strong> had blood on their hands, and one time it was theirs.","Five times <strong>{B}</strong> had blood on their hands, and one time it was theirs.", "Five times <strong>{A}</strong> sacrificed their own happiness for others, and one time they finally put themselves first.", "Five times <strong>{B}</strong> felt safe with <strong>{A}</strong>, and one time they were afraid of them.", "Five times <strong>{B}</strong> and <strong>{A}</strong> made promises, and one time they broke them all.", "Five times <strong>{B}</strong> called <strong>{A}</strong> by a pet name, and one time <strong>{A}</strong> found one for them.", "Five times people thought <strong>{B}</strong> and <strong>{A}</strong> were a couple, and one time it was true.", "Five times <strong>{A}</strong> showed affection through the five love languages, and one time <strong>{B}</strong> returned the gesture.", "Five times <strong>{A}</strong> was late, and one time they were early."]
     var genre = ["Nsfw", "5 Things", "Horror", "Angst", "Fluff"]
+    var abo = ["Omega", "Beta", "Alpha"]
 
     function clear1() {
 
@@ -128,6 +129,13 @@
     function genreChoose() {
         var R1 = Math.floor(Math.random() * genre.length);
         str = genre[R1]
+
+        document.getElementById("premise").innerHTML = str;
+    }
+
+    function aboChoose() {
+        var R1 = Math.floor(Math.random() * abo.length);
+        str = abo[R1]
 
         document.getElementById("premise").innerHTML = str;
     }
@@ -395,6 +403,31 @@
         border-color: rgb(146, 146, 146);
     }
 
+    #aboBtn {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        border-radius: 5px;
+        border: 2px solid #44474d;
+        margin: 30px 0px 0px 750px;
+        width: 100px;
+        padding: 5px 5px 5px 5px;
+        background: #16191E;
+        cursor: pointer;
+        text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #44474d;
+    }
+
+    #aboBtn:hover {
+        margin: 30px 0px 0px 750px;
+        color: #9dff00;
+        background: #16191E;
+        border-color: rgb(146, 146, 146);
+    }
+
     #promptBox {
         font-family: Verdana, sans-serif;
         position: absolute;
@@ -450,6 +483,7 @@
     <div id="main">
         <form>
             <div id="genreBtn" onclick="genreChoose()">Genre</div>
+            <div id="aboBtn" onclick="aboChoose()">ABO</div>
         </form>
         <form>
             <input type="text" name="otp1" value="Person A" id="person1" onfocus="clear1()">
