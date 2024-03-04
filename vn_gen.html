@@ -1,0 +1,282 @@
+<!-- Link: https://meowbiscuit.github.io/Prompt_Generator/vn_gen.html -->
+<script type="text/javascript">
+
+    var promptsAll = ["<strong>{A}</strong> and <strong>{B}</strong> playing Mario Kart. It gets pretty competitive. Suddenly <strong>{A}</strong> reaches over to distract <strong>{B}</strong>. A tickle fight follows.", "<strong>{B}</strong> gives <strong>{A}</strong> a gift, bought or handmade.", "<strong>{B}</strong> and <strong>{A}</strong> swap bodies for a day.", "<strong>{B}</strong> and <strong>{A}</strong> exploring each others' bodies, but not in a sexual way. Finding their different birthmarks, looking over each others' scars and sharing the stories behind them, running their hands over one another and just appreciating the feeling of the other person next to them.", 
+    "During a gathering that’s going on, <strong>{A}</strong> and <strong>{B}</strong> are dancing along to music on the makeshift dancefloor they’d created outside, sharing soft kisses every now and again and pressing their foreheads together as they move along to the beat of the music.", "<strong>{B}</strong> falls asleep in <strong>{A}</strong>'s lap and <strong>{A}</strong> has a conversation with someone else while stroking <strong>{B}</strong>'s hair as if they were a sleeping cat.", 
+    "<strong>{A}</strong> and <strong>{B}</strong> trying to hide their relationship. However, it turns out everyone knows they're dating.", "<strong>{B}</strong> trying on some of <strong>{A}</strong>’s formal clothes.", "<strong>{A}</strong> trying on a beautiful, tailored suit for a ball and <strong>{B}</strong> is helping them (simping ensues).", "<strong>{A}</strong> got a formal suit tailored for <strong>{B}</strong> and wants them to try it on.", "<strong>{A}</strong> doodling on <strong>{B}</strong>’s arm while not paying attention in class.", "<strong>{B}</strong> having to help <strong>{A}</strong> undress after an injury.", 
+    "<strong>{A}</strong> has an online business meeting with someone important who lives across the world so they stay up until 12:00 for the meeting. <strong>{B}</strong> doesn't want to leave <strong>{A}</strong> alone so they grab a blanket and lay in <strong>{A}</strong>'s lap as they attend the meeting. Bonus if: <strong>{B}</strong> accidentally smacks <strong>{A}</strong> on the face in their sleep and everyone in the meeting says that they're cute.",
+    "<strong>{A}</strong> and <strong>{B}</strong> were separated for several years for reasons they couldn't help. They finally find each other and have a heartfelt reunion.", "As kids, <strong>{B}</strong> wins a stuffed animal for <strong>{A}</strong> at the fair, hoping to impress them. Years later, <strong>{A}</strong> reveals that they still have the stuffed animal.", "<strong>{A}</strong> participating in <strong>{B}</strong>'s hobby even if it doesn't personally interest them.", "<strong>{A}</strong> and <strong>{B}</strong> swap bodies for a day.", "<strong>{A}</strong> and <strong>{B}</strong> are on a hammock together, the sun is setting, the air cools and <strong>{A}</strong> is asleep on <strong>{B}</strong>'s chest while <strong>{B}</strong> has a foot on the ground, rocking the hammock in hopes of keeping <strong>{A}</strong> asleep.",
+    "<strong>{A}</strong> keeps posting embarrassing pictures of <strong>{B}</strong> onto Instagram.", "<strong>{A}</strong> has to stand on their tippy toes in order to kiss <strong>{B}</strong> (or the reverse: <strong>{B}</strong> has to slightly bend their knees in order to kiss <strong>{A}</strong>).", "<strong>{A}</strong> tries to cook for <strong>{B}</strong> but makes an absolute mess. <strong>{B}</strong> laughs at their antics.", "<strong>{A}</strong> has to borrow an item of clothing from <strong>{B}</strong> (hastily getting dressed in the morning? caught in bad weather? dressing for an occasion? your choice!), and they're both surprised by the intense, possessive thrill <strong>{B}</strong> gets from the sight of <strong>{A}</strong> in their clothes.", 
+    "<strong>{A}</strong> and <strong>{B}</strong> in a Skype/Discord call (webcam optional) when <strong>{A}</strong> falls asleep in the middle of it. <strong>{B}</strong> decides to let them sleep since <strong>{A}</strong> had a long day and they like the sound of their sleeping. <br> Bonus if someone walks in to <strong>{B}</strong> has fallen asleep too."]
+    var date = []
+    var abo = ["Omega", "Beta", "Alpha"]
+
+    function clear1() {
+
+        document.getElementById("person1").value = "";
+        document.getElementById("person1").style.fontStyle = "normal";
+    }
+
+    function clear2() {
+
+        document.getElementById("person2").value = "";
+        document.getElementById("person2").style.fontStyle = "normal";
+    }
+
+    var A, B;
+    var str;
+
+    function prompts() {
+
+        // Get names of OTP
+        A = document.getElementById("person1").value;
+        B = document.getElementById("person2").value;
+
+        // Get random prompt
+        var R1 = Math.floor(Math.random() * promptsAll.length);
+        str = promptsAll[R1]
+
+        // Replace {A} & {B} in prompt with OTP names
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B);
+        document.getElementById("premise").innerHTML = result;
+    }
+
+    function dateChoose() {
+        var R1 = Math.floor(Math.random() * date.length);
+        str = abo[R1]
+
+        document.getElementById("premise").innerHTML = str;
+    }
+
+    function aboChoose() {
+        var R1 = Math.floor(Math.random() * abo.length);
+        str = abo[R1]
+
+        document.getElementById("premise").innerHTML = str;
+    }
+
+    function swapname() {
+        //Swapping OTP names     
+        var temp = A;
+        A = B;
+        B = temp;
+
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B);
+        document.getElementById("premise").innerHTML = result;
+    }
+    c
+</script>
+
+<title>OTP prompt generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    body {
+        background-color: #16191E;
+    }
+
+    b body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: #000000;
+        line-height: 16px;
+    }
+
+    a {
+        color: #A3A3A3;
+        text-decoration: none;
+    }
+
+
+    #main {
+        width: 600px;
+        margin: auto;
+        font-size: 16px;
+    }
+
+    #person1 {
+        position: absolute;
+        border-radius: 25px;
+        border: 2px solid #6c727c;
+        margin: 250px 0px 0px 0px;
+        width: 150px;
+        padding: 5px;
+        background: #f7f7f7;
+        font-family: arial;
+        font-size: 14px;
+        color: #808080;
+        line-height: 14px;
+        font-style: oblique;
+        text-align: center;
+    }
+
+    #person2 {
+        position: absolute;
+        border-radius: 25px;
+        border: 2px solid #6c727c;
+        margin: 250px 0px 0px 200px;
+        width: 150px;
+        padding: 5px;
+        background: #f7f7f7;
+        font-family: arial;
+        font-size: 14px;
+        color: #808080;
+        line-height: 14px;
+        font-style: oblique;
+        text-align: center;
+    }
+
+    #promptBtn {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        border-radius: 25px;
+        border: 2px solid #6c727c;
+        margin: 75px 0px 0px 500px;
+        width: 100px;
+        padding: 5px 5px 5px 5px;
+        background: #fff;
+        cursor: pointer;
+        text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #promptBtn:hover {
+        margin: 75px 0px 0px 500px;
+        color: #ffe100;
+        background: #16191E;
+        border-color: rgb(146, 146, 146);
+    }
+
+    #aboBtn {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        border-radius: 5px;
+        border: 2px solid #44474d;
+        margin: 30px 0px 0px 750px;
+        width: 100px;
+        padding: 5px 5px 5px 5px;
+        background: #16191E;
+        cursor: pointer;
+        text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #44474d;
+    }
+
+    #aboBtn:hover {
+        margin: 30px 0px 0px 750px;
+        color: #9dff00;
+        background: #16191E;
+        border-color: rgb(146, 146, 146);
+    }
+
+    #dateBtn {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        border-radius: 5px;
+        border: 2px solid #44474d;
+        margin: 30px 0px 0px 900px;
+        width: 100px;
+        padding: 5px 5px 5px 5px;
+        background: #16191E;
+        cursor: pointer;
+        text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #44474d;
+    }
+
+    #dateBtn:hover {
+        margin: 30px 0px 0px 900px;
+        color: #9dff00;
+        background: #16191E;
+        border-color: rgb(146, 146, 146);
+    }
+
+    #promptBox {
+        font-family: Verdana, sans-serif;
+        position: absolute;
+        border-radius: 25px;
+        border: 2px solid #6c727c;
+        padding: 20px;
+        background: #fff;
+        margin: 300px 0px 300px 0px;
+        width: 590px;
+        font-size: 16px;
+    }
+
+    #premise {
+        font-size: 16px;
+        font-family: Verdana, sans-serif;
+        letter-spacing: 0.05em;
+        word-spacing: 0.015em;
+        line-height: 150%;
+    }
+
+    #thanks {
+        font-style: oblique;
+        float: left;
+        font-size: 10px;
+    }
+
+    #swapBtn {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        border-radius: 25px;
+        border: 2px solid #6c727c;
+        margin: 200px 0px 0px 70px;
+        width: 200px;
+        padding: 5px 5px 5px 5px;
+        background: #fff;
+        cursor: pointer;
+        text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #swapBtn:hover {
+        margin: 601px Opx Opx 601px;
+        color: white;
+        background: #16191E;
+    }
+</style>
+</head>
+
+<body>
+    <div id="main">
+        <form>
+            <div id="dateBtn" onclick="dateChoose()">Date-Idea</div>
+            <div id="aboBtn" onclick="aboChoose()">ABO</div>
+        </form>
+        <form>
+            <input type="text" name="otp1" value="Person A" id="person1" onfocus="clear1()">
+        </form>
+        <form>
+            <input type="text" name="otp2" value="Person B" id="person2" onfocus="clear2()">
+        </form>
+
+        <div id="swapBtn" onclick="swapname()">Swap names</div>
+        <div id="promptBox">
+            <b>Your prompt:</b>
+            <br>
+            <br>
+            <span id="premise"></span>
+            <br />
+            <br />
+            <br>
+            <div id="thanks">
+                <strong>I was bored lel</strong>
+            </div>
+            <div id="promptBtn" onclick="prompts()">Prompts</div>
+            <br <div>
+
+
+</body>
