@@ -8,7 +8,7 @@
     "<strong>{A}</strong> and <strong>{B}</strong> were separated for several years for reasons they couldn't help. They finally find each other and have a heartfelt reunion.", "As kids, <strong>{B}</strong> wins a stuffed animal for <strong>{A}</strong> at the fair, hoping to impress them. Years later, <strong>{A}</strong> reveals that they still have the stuffed animal.", "<strong>{A}</strong> participating in <strong>{B}</strong>'s hobby even if it doesn't personally interest them.", "<strong>{A}</strong> and <strong>{B}</strong> swap bodies for a day.", "<strong>{A}</strong> and <strong>{B}</strong> are on a hammock together, the sun is setting, the air cools and <strong>{A}</strong> is asleep on <strong>{B}</strong>'s chest while <strong>{B}</strong> has a foot on the ground, rocking the hammock in hopes of keeping <strong>{A}</strong> asleep.",
     "<strong>{A}</strong> keeps posting embarrassing pictures of <strong>{B}</strong> onto Instagram.", "<strong>{A}</strong> has to stand on their tippy toes in order to kiss <strong>{B}</strong> (or the reverse: <strong>{B}</strong> has to slightly bend their knees in order to kiss <strong>{A}</strong>).", "<strong>{A}</strong> tries to cook for <strong>{B}</strong> but makes an absolute mess. <strong>{B}</strong> laughs at their antics.", "<strong>{A}</strong> has to borrow an item of clothing from <strong>{B}</strong> (hastily getting dressed in the morning? caught in bad weather? dressing for an occasion? your choice!), and they're both surprised by the intense, possessive thrill <strong>{B}</strong> gets from the sight of <strong>{A}</strong> in their clothes.", 
     "<strong>{A}</strong> and <strong>{B}</strong> in a Skype/Discord call (webcam optional) when <strong>{A}</strong> falls asleep in the middle of it. <strong>{B}</strong> decides to let them sleep since <strong>{A}</strong> had a long day and they like the sound of their sleeping. <br> Bonus if someone walks in to <strong>{B}</strong> has fallen asleep too."]
-    var date = []
+    var date = ["Date 1", "Date 2"]
     var abo = ["Omega", "Beta", "Alpha"]
 
     function clear1() {
@@ -43,7 +43,7 @@
 
     function dateChoose() {
         var R1 = Math.floor(Math.random() * date.length);
-        str = abo[R1]
+        str = date[R1]
 
         document.getElementById("premise").innerHTML = str;
     }
